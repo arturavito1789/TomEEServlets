@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    
+    <body>
+       
+        <h:form>        
+        <h:outputText value="#{startApplicationTelegram.resultOperationTelegram}" />
+        <br/>
+        <br/>        
+        <h:outputLabel for="phohe_number">phohe number:</h:outputLabel>
+        <h:inputText id="phohe_number" value="#{startApplicationTelegram.phohe_number}"/>
+        <br/>
+        <h:commandLink value="get code"  action="#{startApplicationTelegram.connectTelegram}"/>
+        <br/>
+        <br/>       
+        <h:outputLabel for="kodTelegram">input code:</h:outputLabel>
+        <h:inputText id="kodTelegram" value="#{startApplicationTelegram.kodTelegram}" valueChangeListener="#{startApplicationTelegram.changedkodTelegram}"/>
+        <br/>
+        <h:commandLink value="submit"  action="#{startApplicationTelegram.goToDataTelegram}"/>
+        </h:form>
+        
+      
+    </body>
+
+    
+    
+</html>
+
+
